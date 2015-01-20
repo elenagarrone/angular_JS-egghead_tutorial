@@ -1,5 +1,3 @@
-// This is how you share data between two controllers: you create a service using the factory, you return whatever object you want to use (APIs). Once you've defined a service, the data can be injected in the controllers.
-
 var myApp = angular.module('myApp', []);
 
 myApp.factory('Data', function () {
@@ -7,11 +5,14 @@ myApp.factory('Data', function () {
 });
 
 
-// We inject the 'Data into the first controller'
 function FirstCtrl($scope, Data){
   $scope.data = Data;
 }
 
 function SecondCtrl($scope, Data){
   $scope.data = Data;
+  // creating a method for the controller:
+  $scope.reversedMessage = function(message){
+    return message.split("").reverse().join("");
+  }
 }
