@@ -5,18 +5,19 @@
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
   <link rel="stylesheet" href="foundation/foundation.min.css">
-  <script type='text/javascript' src='js/main.js'></script>
  </head>
  <body>
 
-  <section ng-app="">
-    <input type='text' ng-model='data.message'> <!-- All three instances of data.message are bound to each other through the first data.message, which is in the scope of the entire application. If put just 'message' instead of 'data.message', each new ng-model of message is creating a new instance of message, and so each model will be an unbound instance. It destroys the scope inheritance. -->
-    <h1>{{ data.message }}</h1>
-    <section ng-controller='FirstCtrl'>  <!-- this is the scope related to the controller FirstCtrl -->
+  <section ng-app="myApp"> <!-- This will link to the module in the main.js file -->
+<!--     No parent scope for them to grab the data model off of -->
+
+    <section ng-controller='FirstCtrl'>  
       <input type='text' ng-model='data.message'>
       <h1>{{ data.message }}</h1>
     </section>
-    <section ng-controller='SecondCtrl'>  <!-- this is the scope related to the controller SecondCtrl -->
+
+
+    <section ng-controller='SecondCtrl'>
       <input type='text' ng-model='data.message'>
       <h1>{{ data.message }}</h1>
     </section>
@@ -24,5 +25,6 @@
   </section>
 
   <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type='text/javascript' src='js/main.js'></script>
   </body>
 </html>
