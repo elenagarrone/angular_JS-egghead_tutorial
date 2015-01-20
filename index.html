@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>AngularJS Tutorials</title>
-   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<meta content="utf-8" http-equiv="encoding">
-   <link rel="stylesheet" href="foundation/foundation.min.css">
+  <title>AngularJS Tutorials</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <link rel="stylesheet" href="foundation/foundation.min.css">
+  <script type='text/javascript' src='js/main.js'></script>
  </head>
  <body>
 
   <section ng-app="">
-    <input type='text' ng-model='data.message'>
-    <h1>{{ data.message + ' world' }}</h1>
-    <article class="{{ data.message }}">
-      Wrap me in a foundation component
-    </article>
+    <section ng-controller='FirstCtrl'>  <!-- this is the scope related to the controller FirstCtrl -->
+      <h1>{{ data.message + ' world' }}</h1>
+      <article class="{{ data.message }}">
+        Wrap me in a foundation component
+      </article>
+    </section>
   </section>
 
-   <script type="text/javascript" src="scripts/angular.min.js"></script>
- </body>
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  </body>
 </html>
