@@ -1,7 +1,7 @@
 AngularJS-egghead_tutorial
 ===============================
 
-This is a simple application built following the tutorial at  <a href='https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/'>this link</a>  to try and have a better understanding of how angularJS works.
+This is a simple application built following the tutorial at  <a href='https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/'>this link</a> to try and have a better understanding of how angularJS works.
 
 Technologies:
 -------------
