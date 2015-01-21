@@ -18,7 +18,8 @@ Change into the directory:
 ```shell
 $ cd angular_JS-egghead_tutorial
 ```
-Try it:
+Go through the commits and try it:
 ```shell
+$ git checkout <commit>
 $ open index.html
 ```
