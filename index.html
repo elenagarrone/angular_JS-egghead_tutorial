@@ -9,7 +9,7 @@
  <body>
 
   <section ng-app="myApp">
-    <input type='text' ng-model='search.name'>
+    <input type='text' ng-model='search.$'>
     <section ng-controller='AvengersCtrl'>
       <table>
         <tr ng-repeat="actor in avengers.cast | filter: search">
