@@ -8,8 +8,14 @@
   </head>
   <body>
 
-    <section ng-app='behaviorApp'>
-      <article enter='panel' leave>I'm content!</article>
+    <section ng-app='twitterApp'>
+
+      <section ng-controller='AppCtrl'>
+
+        <h1 enter='deleteTweets()'>Roll over to load more tweets</h1>
+
+      </section>
+
     </section>
 
   <script type="text/javascript" src="scripts/angular.min.js"></script>
