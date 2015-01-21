@@ -4,6 +4,8 @@ app.directive('superhero', function(){
   return {
     restrict: 'E',
 
+    scope: {}, // isolating the scope: keep the scope inside of the superhero
+
     controller: function($scope) {
       $scope.abilities = [];
 
@@ -21,6 +23,7 @@ app.directive('superhero', function(){
     },
 
     link: function(scope, element){
+      element.addClass('button')
       element.bind('mouseenter', function(){
         console.log(scope.abilities);
       })
