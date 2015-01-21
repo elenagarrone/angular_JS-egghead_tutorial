@@ -12,7 +12,7 @@
     <input type='text' ng-model='search.$'>
     <section ng-controller='AvengersCtrl'>
       <table>
-        <tr ng-repeat="actor in avengers.cast | orderBy: '-name'"> <!-- reverse order when you put '-' -->
+        <tr ng-repeat="actor in avengers.cast | limitTo: 5">
           <td>{{ actor.name }}</td>
           <td>{{ actor.character }}</td>
         </tr>
