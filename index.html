@@ -9,16 +9,14 @@
  <body>
 
   <section ng-app="myApp">
-
-    <section ng-controller='FirstCtrl'>
-      <input type='text' ng-model='data.message'>
-      <h1>{{ data.message }}</h1>
-    </section>
-
-
-    <section ng-controller='SecondCtrl'>
-      <input type='text' ng-model='data.message'>
-      <h1>{{ data.message | reverse }}</h1>
+    <input type='text' ng-model='searchText'>
+    <section ng-controller='AvengersCtrl'>
+      <table>
+        <tr ng-repeat="actor in avengers.cast | filter: searchText">
+          <td>{{ actor.name }}</td>
+          <td>{{ actor.character }}</td>
+        </tr>
+      </table>
     </section>
 
   </section>
