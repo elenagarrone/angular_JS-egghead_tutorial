@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>AngularJS Tutorials</title>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <link rel="stylesheet" href="foundation/foundation.min.css">
- </head>
- <body>
+  <head>
+    <title>AngularJS Tutorials</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" href="foundation/foundation.min.css">
+  </head>
+  <body>
 
-  <section ng-app="myApp">
-    <input type='text' ng-model='search.$'>
-    <section ng-controller='AvengersCtrl'>
-      <table>
-        <tr ng-repeat="actor in avengers.cast | orderBy: 'name' | limitTo: -5 | filter: search">
-          <td>{{ actor.name | lowercase }}</td>
-          <td>{{ actor.character | uppercase }}</td>
-        </tr>
-      </table>
-    </section>
-
-  </section>
+   <section ng-app='superhero'>
+     <superman></superman>
+   </section>
 
   <script type="text/javascript" src="scripts/angular.min.js"></script>
   <script type='text/javascript' src='js/main.js'></script>
