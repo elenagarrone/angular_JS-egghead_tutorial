@@ -9,10 +9,10 @@
  <body>
 
   <section ng-app="myApp">
-    <input type='text' ng-model='searchText'>
+    <input type='text' ng-model='search.name'>
     <section ng-controller='AvengersCtrl'>
       <table>
-        <tr ng-repeat="actor in avengers.cast | filter: searchText">
+        <tr ng-repeat="actor in avengers.cast | filter: search">
           <td>{{ actor.name }}</td>
           <td>{{ actor.character }}</td>
         </tr>
